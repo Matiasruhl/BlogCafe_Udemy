@@ -1,0 +1,282 @@
+:root {
+    --FuenteHeadind: 'PT Sans', sans-serif;
+    --FuenteParrafos: 'Open Sans', sans-serif;
+    --Primario:#784D3C;
+    --Blanco:#FFFFFF;
+    --Negro:#000000;
+    --Gris:#575757;
+    --GrisClaro:#B1B1B1;
+}
+/** Siempre Incluir **/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+/** 1rem = 10px **/
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--FuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2; /** Interlineado **/
+}
+
+/** Globales **/
+
+.Contenedor{
+    /** max-width: 120rem;
+    width: 90%; **/ 
+    width: min(90%,120rem);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    font-family: var(--FuenteHeadind);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+
+/** Utilidades **/
+
+.No-Margin{
+    margin: 0;
+}
+.No-Padding{
+    padding: 0;
+}
+.Centrar-Texto{
+    text-align: center;
+}
+
+/** Header **/
+
+.webp .Header{ /** Si soporta webp aplica webp **/
+    background-image: url(../img/banner.webp);
+}
+.no-webp .Header{
+    background-image: url(../img/banner.jpg);
+}
+.Header{
+    background-image: url(../img/banner.jpg);
+    /** Salimos de la carpeta en la que estamos poniendo .. **/
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.Header__texto{
+    text-align: center;
+    color: var(--Blanco);
+    margin-top: 5rem;
+}
+@media(min-width:768px){
+    .Header__texto{
+        margin-top: 15rem;
+    }
+}
+@media(min-width:768px){
+    .Barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.Barra{
+    padding-top: 4rem;
+}
+.Logo{
+    color: var(--Blanco);
+    
+}
+.Logo__nombre{
+    font-weight: 400;
+}
+.Logo__bold{
+    font-weight: 700;
+}
+@media(min-width:768px){
+    .Navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+.Navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--Blanco);
+}
+@media(min-width:768px){
+    .Contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+.Entrada{
+    border-bottom: 1px solid var(--Gris); /** Margen solo en la parte de abajo **/
+    margin-bottom: 2rem;
+}
+.Entrada:last-of-type{ /** Ultimo articulo del blog **/
+    border: none;
+    /** margin-bottom: 0; **/
+}
+.Boton{
+    display: block;  /** Para que tome todo el espacio disponible en un dispositivo movil **/
+    font-family: var(--FuenteHeadind);
+    color: var(--Blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase; /** Transformamos el texto a mayusculas **/
+    font-weight: 700; /** Ponemos el texto en negrita **/
+    margin-bottom: 2rem;
+    border: none;
+}
+@media(min-width:768px){
+    .Boton{
+        display: inline-block;
+    }
+}
+.Boton:hover{
+    cursor: pointer;
+}
+.Boton--primario{
+    background-color: var(--Negro);
+}
+.Boton--secundario{
+    background-color: var(--Primario);
+}
+.Cursos{
+    list-style: none; /** Para quitar las vinietas **/
+}
+.Widget-curso{
+    border-bottom: 1px solid var(--Gris);
+    margin-bottom: 2rem;
+}
+.Widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.Widget-curso__label{
+    font-family: var(--FuenteHeadind);
+    font-weight: bold;
+}
+.Widget-curso__info{
+    font-weight: 400; /** normal = 400 **/
+}
+.Widget-curso__label , .Widget-curso__info {
+    font-size: 2rem;
+}
+
+/** Footer **/
+
+.Footer{
+    background-color: var(--Negro);
+    padding-bottom: 3rem; /** 3rem abajo **/
+    margin-top: 5rem;
+}
+
+/** Pagina Sobre Nosotros **/
+
+@media(min-width: 768px){
+    .Sobre-Nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+}
+
+/** Pagina de Cursos **/
+
+@media(min-width: 768px){
+    .Curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.Curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--Gris);
+}
+.Curso:last-of-type{
+    border: none;
+}
+.Curso__label{
+    font-family: var(--FuenteHeadind);
+    font-weight: bold;
+}
+.Curso__info{
+    font-weight: normal;
+}
+.Curso__label , .Curso__info{
+    font-size: 2rem;
+}
+
+/** Pagina Contacto **/
+
+.Contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.Formulario{
+    background-color: var(--Blanco);
+    margin: -5rem auto 0 auto; /** Para ensimar a la imagen de arriba **/
+    width: 95%;
+    padding: 5rem;
+    border: 1px solid var(--Gris);
+}
+.Campo{
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.Campo__label{
+    flex: 0 0 9rem; /** No crece No se Achica Valor Base de 9rem **/
+    text-align: right;
+}
+.Campo__field{
+    flex: 1; /** Toma todo el espacio disponible **/
+    border: 1px solid var(--GrisClaro); /** Agregar uno mas claro **/
+}
+.Campo__field--textarea{
+    height: 20rem;
+}
+
+/** Formulario **/
+
+@media (max-width: 768px) { 
+    .Campo__label{
+        text-align: left;
+        margin-right: 0
+    }
+    .Campo__field{
+        flex: auto;
+    }
+    .Campo{
+        gap: 0;
+    }
+    .Formulario{
+        padding: 3rem;
+    }
+}

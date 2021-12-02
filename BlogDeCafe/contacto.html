@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog De Cafe</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="Header">
+
+        <div class="Contenedor">
+
+            <div class="Barra">
+
+                <a class="Logo" href="index.html">
+
+                    <h1 class="Logo__nombre No-Margin Centrar-Texto">Blog<samp class="Logo__bold">DeCafe</samp></h1>
+
+                </a>
+
+                <nav class="Navegacion">
+
+                    <a class="Navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="Navegacion__enlace" href="cursos.html">Cursos</a>
+                    <a class="Navegacion__enlace" href="contacto.html">Contacto</a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div class="Header__texto">
+
+            <h2 class="No-Margin">Blog de cafe con consejos y cursos</h2>
+
+            <p class="No-Margin">Aprende de los expertos con las mejores recetas y consejos</p>
+
+        </div>
+
+    </header>
+
+    <main class="Contenedor">
+
+        <h3 class="Centrar-Texto">Contacto</h3>
+
+        <div class="Contacto-bg"></div>
+
+        <form class="Formulario">
+
+            <div class="Campo"> <!--Campo-->
+
+                <!--El For hace referencia a la id de un input-->
+                <label class="Campo__label" for="Nombre" >Nombre</label> 
+                <input class="Campo__field" type="text" placeholder="Tu Nombre" id="Nombre">
+                
+            </div>            <!--Fin Campo-->
+
+            <div class="Campo"> <!--Campo-->
+
+                <label class="Campo__label" for="email">Email</label> 
+                <input class="Campo__field" type="email" placeholder="Tu Correo electronico" id="email">
+                
+            </div>            <!--Fin Campo-->
+
+            <div class="Campo"> <!--Campo-->
+
+                <label class="Campo__label" for="Mensaje">Mensaje</label> 
+                <textarea class="Campo__field Campo__field--textarea" id="Mensaje"></textarea>
+                
+            </div>            <!--Fin Campo-->
+            
+            <div class="Campo"> <!--Campo-->
+ 
+                <input type="submit" value="Enviar" class="Boton Boton--primario">
+                
+            </div>            <!--Fin Campo-->
+
+        </form>
+
+    </main>
+
+    <footer class="Footer">
+
+        <div class="Contenedor">
+
+            <div class="Barra">
+
+                <a class="Logo" href="index.html">
+
+                    <h1 class="Logo__nombre No-Margin Centrar-Texto">Blog<samp class="Logo__bold">DeCafe</samp></h1>
+
+                </a>
+
+                <nav class="Navegacion">
+
+                    <a class="Navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="Navegacion__enlace" href="cursos.html">Cursos</a>
+                    <a class="Navegacion__enlace" href="contacto.html">Contacto</a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!--Aqui iria todo el codigo de javaScrip-->
+    <script src="js/modernizr.js"></script>
+
+</body>
+</html>
